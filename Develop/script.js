@@ -44,18 +44,16 @@ var generatePassword =function() {
     if (forthPrompt === "NO" || forthPrompt === "No" || forthPrompt === "no"){
       var numbers = "";
       }   
-
+    selectedCharacters = specialCharacters + upperCase + lowercase + numbers  
      /*setting length requirements */ 
+  if (selectedCharacters == "") {
+    window.alert("Please reselect your critera and try again: At least one character type is required")
+      }   
   while (inputLength < 8 || (inputLength != null && inputLength > maxLength)) {
     inputLength = window.prompt('Please confirm how long you want your password to be. It should be no more than ' + maxLength + ' characters in length');
     }
-    selectedCharacters = specialCharacters + upperCase + lowercase + numbers
-    console.log(selectedCharacters)
-    console.log(lowercase)
-    console.log(upperCase)
-    console.log(specialCharacters)
-    console.log(inputLength)
-    while (input.length < inputLength){
+
+    while (input.length < inputLength && selectedCharacters != ""){
     for (var i = 0; i < inputLength; i++)
       input += selectedCharacters.charAt(Math.floor(Math.random() * inputLength))
       console.log(input);
@@ -63,36 +61,12 @@ var generatePassword =function() {
   return input   
   }
   
-  /*
-
-  var initalPrompt = window.prompt("Hello! Would you like your password to contain Special Characters like @'s and !;s ?");
- 
-  if (initalPrompt === "YES" || initalPrompt === "Yes" || initalPrompt === "yes") {
-    var allCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()?><{}/*-+";
-  }
-  if (initalPrompt === "NO" || initalPrompt === "No" || initalPrompt === "no") {
-    var allCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  }
-
+  /* console.log(selectedCharacters)
+  console.log(lowercase)
+  console.log(upperCase)
+  console.log(specialCharacters)
+  console.log(inputLength) */
   
-
-  
-  while (inputLength < 8 || (inputLength != null && inputLength > maxLength)) {
-    inputLength = window.prompt('Please confirm how long you want your password to be. It should be no more than ' + maxLength + ' characters in length');
-  }
-  passwordLength = inputLength;
-  for (var i = 0; i < passwordLength; i++)
-    input += allCharacters.charAt(Math.floor(Math.random() * passwordLength));
-  console.log(passwordLength)
-  console.log(inputLength)
-  
-  return input
-}
-console.log(input)
-function onclick(){ */
-
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
