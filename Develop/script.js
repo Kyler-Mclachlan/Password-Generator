@@ -1,4 +1,15 @@
 // Assignment code here
+var baseInput = function () {
+  var input = '';
+  var inputLength = 0;
+  var maxLength = 128;
+  var specialCharacters = "";
+  var uppercase = "";
+  var lowercase = "";
+  var numbers = "";
+}
+
+var result = "";
 var input = '';
 var inputLength = 0;
 var maxLength = 128;
@@ -9,8 +20,8 @@ var numbers = "";
 /* var allCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()?><{}/*-+"; */
 
 var generatePassword =function() {
-
   /*Asking if they want special characters*/
+  result = "";
   var initalPrompt = window.prompt("Would you like your password to contain Special characters?") 
   if (initalPrompt === "YES" || initalPrompt === "Yes" || initalPrompt === "yes") {
     var specialCharacters = "!@#$%^&*()?><{}/*-+";
@@ -53,12 +64,15 @@ var generatePassword =function() {
     inputLength = window.prompt('Please confirm how long you want your password to be. It should be no more than ' + maxLength + ' characters in length');
     }
 
-    while (input.length < inputLength && selectedCharacters != ""){
+    while (result.length < inputLength && selectedCharacters != ""){
     for (var i = 0; i < inputLength; i++)
-      input += selectedCharacters.charAt(Math.floor(Math.random() * inputLength))
+      result += selectedCharacters.charAt(Math.floor(Math.random() * inputLength))
       console.log(input);
     }
-  return input   
+  console.log(result)
+  inputLength = 0;
+  return result   
+  
   }
   
   /* console.log(selectedCharacters)
