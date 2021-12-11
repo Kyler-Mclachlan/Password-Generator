@@ -22,7 +22,7 @@ var numbers = "";
 var generatePassword =function() {
   /*Asking if they want special characters*/
   result = "";
-  var initalPrompt = window.prompt("Would you like your password to contain Special characters?") 
+  var initalPrompt = window.prompt("Would you like your password to contain Special characters? Enter Yes or No") 
   if (initalPrompt === "YES" || initalPrompt === "Yes" || initalPrompt === "yes") {
     var specialCharacters = "!@#$%^&*()?><{}/*-+";
     }
@@ -31,7 +31,7 @@ var generatePassword =function() {
     }
   
     /* Uppercase */
-  var secondPrompt = window.prompt("Would you like your password to contain Uppercase characters?") 
+  var secondPrompt = window.prompt("Would you like your password to contain Uppercase characters? Enter Yes or No") 
   if (secondPrompt === "YES" || secondPrompt === "Yes" || secondPrompt === "yes"){
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
@@ -39,16 +39,16 @@ var generatePassword =function() {
     var upperCase = "";
     }
   
-    /*Special characters and no uppercase*/
-  var thirdPrompt = window.prompt("Would you like your password to contain Lowercase characters?") 
+    /*Lowercase*/
+  var thirdPrompt = window.prompt("Would you like your password to contain Lowercase characters? Enter Yes or No") 
     if (thirdPrompt === "YES" || thirdPrompt === "Yes" || thirdPrompt === "yes"){
       var lowercase = "abcdefghijklmnopqrstuvwxyz";
       }
     if (thirdPrompt === "NO" || thirdPrompt === "No" || thirdPrompt === "no"){
       var lowercase = "";
       }
-
-  var forthPrompt = window.prompt("Would you like your password to contain numbers ?") 
+      /*Numbers*/
+  var forthPrompt = window.prompt("Would you like your password to contain Numbers? Enter Yes or No") 
     if (forthPrompt === "YES" || forthPrompt === "Yes" || forthPrompt === "yes"){
       var numbers = "0123456789";
       }
@@ -74,13 +74,7 @@ var generatePassword =function() {
   return result   
   
   }
-  
-  /* console.log(selectedCharacters)
-  console.log(lowercase)
-  console.log(upperCase)
-  console.log(specialCharacters)
-  console.log(inputLength) */
-  
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
