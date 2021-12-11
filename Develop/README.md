@@ -8,7 +8,7 @@ This is project is a password generator that prompts users to choose criteria fo
 If you wish to view the project simply click on the link below the image. Feel free to pull the repository (also linked below) if you wish to view the codebase. Thanks and please reach out to the email listed at the end of the document with any questions!
 
 # Image of website
-![plot](./assets/images/image_of_website.PNG)
+![plot](./assets/images/img_of_website.PNG)
 
 # Link to website
 
